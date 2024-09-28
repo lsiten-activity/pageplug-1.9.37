@@ -25,10 +25,13 @@ module.exports = {
   },
   webpack: {
     configure: (webpackConfig) => {
+      console.log("%c===== configure ⧭", "color: #aa00ff");
       const config = {
         resolve: {
+          extensions: [".js", ".jsx", ".ts", ".tsx"],
           alias: {
             "lodash-es": "lodash",
+            "react/jsx-runtime": "react/jsx-runtime.js",
           },
           fallback: {
             assert: false,
