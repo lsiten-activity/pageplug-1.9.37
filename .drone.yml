@@ -43,7 +43,7 @@ steps:
       - name: node-run-script
         path: /app/node/build
       - name: node-cache
-        path: ./app/client/.yarn/cache
+        path: /app/node/cache/.yarn/cache
     commands:
       - pwd
       - ls -al
