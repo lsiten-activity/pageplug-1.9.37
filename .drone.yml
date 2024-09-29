@@ -108,10 +108,10 @@ steps:
         - s_ip
         - n_path
       script:
-        - cd $N_PATH/pageplug/
+        - cd $N_PATH/pageplug-1.9.37/
         - pwd
         - scp -r ./*  $S_USER@$S_IP:/www/wwwroot/pageplug/server/
-        - cd $N_NODE_PATH/pageplug/
+        - cd $N_NODE_PATH/pageplug-1.9.37/
         - pwd
         - scp -r ./*  $S_USER@$S_IP:/www/wwwroot/pageplug/client/
   - name: 开始部署
