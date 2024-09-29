@@ -52,4 +52,9 @@ mkdir -p dist/plugins
 cp -v ./appsmith-server/target/server-*.jar dist/
 
 # Copy all the plugins
-rsync -av --exclude "original-*.jar" ./appsmith-plugins/*/target/*.jar dist/plugins/
+# 使用find查找文件并排除特定模式的文件
+find ./appsmith-plugins/*/target/ -name "*.jar" -not -name "original-*.jar" | \
+while read file; do
+  # 复制文件到目标目录
+  cp "$file" dist/plugins/
+done

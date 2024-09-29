@@ -31,6 +31,7 @@ steps:
       - mvn clean compile
       - chmod +x build.sh
       - ./build.sh -DskipTests
+      - pwd
       - mkdir -p /app/build/${DRONE_REPO_NAME} && rm -rf /app/build/${DRONE_REPO_NAME}/*
       - mkdir -p /app/build/${DRONE_REPO_NAME} && cp -Rf ./dist /app/build/${DRONE_REPO_NAME}
       - mkdir -p /app/build/${DRONE_REPO_NAME} && cp -Rf ./scripts /app/build/${DRONE_REPO_NAME}
