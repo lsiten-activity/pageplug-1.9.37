@@ -17,7 +17,7 @@ volumes:
       path: /volume2/docker/drone/server-01/drone-runner-docker/node-cache/yarn/3.5.1
 steps:
   - name: 后端构建
-    image: maven:3.8-openjdk-11
+    image: maven:3.8.5-openjdk-17
     pull: if-not-exists
     volumes:
       - name: maven-cache
